@@ -12,3 +12,8 @@
     yum:
       update_cache: yes
       state: latest
+
+  - name: install httpd
+    apt:
+      name: httpd
+    when: ansible_distribution == "Ubuntu"
